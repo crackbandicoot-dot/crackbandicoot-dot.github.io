@@ -8,6 +8,8 @@ repository: crackbandicoot-dot/crackbandicoot-dot.github.io
 # Theme settings
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "default"   # or "dark", "air", etc.
+plugins:
+  - jekyll-include-cache
 
 # Collections (your projects)
 collections:
