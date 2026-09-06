@@ -1,5 +1,6 @@
 ---
 layout: home
+author_profile: true
 title: Welcome to My Curriculum
 ---
 
@@ -10,11 +11,13 @@ All content is written in Markdown and automatically turned into HTML by Jekyll.
 
 ## Projects
 
+ul>
 {% for project in site.projects %}
-- **[{{ project.title }}]({{ project.url | relative_url }})**  
-  {{ project.description }}
+  <li>
+    <a href="{{ project.url | relative_url }}">{{ project.title }}</a> – {{ project.description }}
+  </li>
 {% endfor %}
-
+</ul>
 ---
 
 *Want to see more? Check out my [GitHub](https://github.com/crackbandicoot-dot).*
