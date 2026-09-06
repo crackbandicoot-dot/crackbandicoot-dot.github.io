@@ -3,7 +3,7 @@ layout: home
 title: Welcome to My Curriculum
 ---
 
-# Hi, I'm [Cristhian Delgado]
+# Hi, I'm Cristhian Delgado
 
 This site showcases my projects, skills, and learning journey.  
 All content is written in Markdown and automatically turned into HTML by Jekyll.
