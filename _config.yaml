@@ -1,25 +1,23 @@
-title: "Cristhian Delgado Garcia"
-email: your.email@example.com
+title: "Cristhian"
+email: your.email@example.com   # optional
 description: "Curriculum and projects"
 url: "https://crackbandicoot-dot.github.io"
-baseurl: ""   # keep empty for user site
+baseurl: ""
 repository: crackbandicoot-dot/crackbandicoot-dot.github.io
 
-# Theme settings
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "default"   # or "dark", "air", etc.
+# Theme
+remote_theme: daattali/beautiful-jekyll
 
-# Collections (your projects)
+# Collections
 collections:
   projects:
     output: true
     permalink: /:collection/:name/
 
-# Defaults (optional)
+# Defaults
 defaults:
   - scope:
       path: ""
       type: projects
     values:
-      layout: single
-      author_profile: false
+      layout: page
