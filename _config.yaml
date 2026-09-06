@@ -1,0 +1,7 @@
+# _config.yml
+title: My Curriculum
+theme: minima   # or any Jekyll theme you prefer
+
+collections:
+  projects:
+    output: true
