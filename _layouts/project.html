@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="project">
+
+  <a class="project__back" href="{{ '/' | relative_url }}#projects">&larr; All projects</a>
+
+  <h1 class="project__title">{{ page.title }}</h1>
+
+  {% if page.tech %}
+  <ul class="tag-row">
+    {% for item in page.tech %}<li class="tag">{{ item }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="project__links">
+    {% if page.repo %}<a href="{{ page.repo }}" target="_blank" rel="noopener">Source →</a>{% endif %}
+    {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener">Live demo →</a>{% endif %}
+  </div>
+
+  <div class="project__body">
+    {{ content }}
+  </div>
+
+</article>

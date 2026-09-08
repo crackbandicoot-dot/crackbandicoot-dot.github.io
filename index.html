@@ -1,0 +1,56 @@
+---
+layout: default
+title: Cristhian Delgado — CS student & backend developer
+---
+
+<section class="hero">
+  <p class="hero__prompt">$ whoami<span class="cursor"></span></p>
+  <h1 class="hero__name">Cristhian Delgado</h1>
+  <p class="hero__role">CS student, one term from graduating &middot; backend-leaning &middot; C# by choice</p>
+
+  <p class="hero__bio">
+    I've been writing code since I was 18 &mdash; about five years now, most of it in C#,
+    where I've built interpreters, a game, a raw-socket server, and apps in clean
+    architecture. But the habit my degree actually built in me is what happens
+    <em>before</em> the code: sketching a database on paper, weighing tradeoffs,
+    thinking like a computer scientist before I think like a typist.
+  </p>
+
+  <ul class="tag-row tag-row--skills">
+    <li class="tag tag--primary">C#</li>
+    <li class="tag">JavaScript</li>
+    <li class="tag">Python</li>
+    <li class="tag">Haskell</li>
+    <li class="tag">HTML</li>
+    <li class="tag">CSS</li>
+    <li class="tag">C</li>
+    <li class="tag" title="reluctantly">C++</li>
+  </ul>
+</section>
+
+<section id="projects" class="projects">
+  <h2 class="projects__heading">Projects</h2>
+
+  {% assign projects = site.projects | sort: 'date' | reverse %}
+
+  {% if projects.size == 0 %}
+    <p class="projects__empty">
+      Nothing here yet &mdash; drop a Markdown file into <code>_projects/</code> and it
+      will show up automatically. See <code>PROJECT_TEMPLATE.md</code> for the format.
+    </p>
+  {% else %}
+    <div class="project-grid">
+      {% for project in projects %}
+        <a class="project-card" href="{{ project.url | relative_url }}">
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          <p class="project-card__description">{{ project.description }}</p>
+          {% if project.tech %}
+          <ul class="tag-row">
+            {% for item in project.tech %}<li class="tag">{{ item }}</li>{% endfor %}
+          </ul>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>

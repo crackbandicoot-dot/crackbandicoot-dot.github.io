@@ -1,0 +1,27 @@
+title: Cristhian Delgado
+description: CS student & backend-leaning developer — systems, tradeoffs, C#.
+
+# No Jekyll theme here — the site uses fully custom layouts in /_layouts
+# and styling in /assets/css/style.css, so the design stays consistent
+# no matter what you add.
+markdown: kramdown
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Anything dropped into _projects/ automatically:
+#  - gets wrapped in _layouts/project.html (you never set "layout:" yourself)
+#  - shows up on the homepage grid, newest first, pulling from front matter
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Files Jekyll should ignore when building the site
+exclude:
+  - README.md
+  - PROJECT_TEMPLATE.md
